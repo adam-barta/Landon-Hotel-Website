@@ -17,6 +17,7 @@ export class AppComponent implements OnInit{
 
   englishWelcomeMessage$!: Observable<string>;
   frenchWelcomeMessage$!: Observable<string>;
+  convertedTime:string[] = [];
 
   constructor(private httpClient:HttpClient){}
 
@@ -34,6 +35,11 @@ export class AppComponent implements OnInit{
     ngOnInit(){
       this.englishWelcomeMessage$ = this.httpClient.get(this.baseURL + '/welcome?lang=en-US', { responseType: 'text' });
       this.frenchWelcomeMessage$ = this.httpClient.get(this.baseURL + '/welcome?lang=fr-CA', { responseType: 'text' });
+
+      this.httpClient.get<string[]>(this.baseURL + '/conversion').subscribe(a => {
+        this.convertedTime = a;
+        console.log(this.convertedTime);
+      });
 
       this.roomsearch= new FormGroup({
         checkin: new FormControl(' '),

@@ -30,6 +30,13 @@
       </div>
 
       <div class="row">
+        <strong>Join us for an online live presentation held at the Landon Hotel</strong>
+      </div>
+      <div class="row" *ngIf="convertedTime">
+        <p *ngFor="let time of convertedTime">{{ time }}</p>
+      </div>
+
+      <div class="row">
         <div class=""col-12>
           <div class="gallery">
             <img src="assets/images/intro_room.jpg" alt="Intro Gallery Room Sample Pictures">
