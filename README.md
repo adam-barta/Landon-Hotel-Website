@@ -1,4 +1,4 @@
-# D387 – Advanced Java
+# Landon Hotel Website
 
 ## Overview
 
