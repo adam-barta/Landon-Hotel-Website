@@ -24,7 +24,7 @@ This project implements multithreaded, object-oriented code. It also explores de
    cd D387-PA
    ```
 
-3. **Run Spring Boot back-end in IDE**: `src/main/java/edu/wgu/d387_sample_code/D387SampleCodeApplication.java`
+3. **Run Spring Boot back-end in IDE**: `src/main/java/com/example/d387_sample_code/D387SampleCodeApplication.java`
 
 4. **Run front-end**:
 ```bash
